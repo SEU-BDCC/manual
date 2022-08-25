@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>二、高性能计算平台使用 &#8212; 大数据计算中心用户手册 1.0 文档</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="三、云平台使用" href="../cloud/contents.html" />
+    <link rel="prev" title="一、堡垒机登录" href="../login/contents.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">大数据计算中心用户手册 1.0 文档</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  目录:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../login/contents.html">
+   一、堡垒机登录
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   二、高性能计算平台使用
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cloud/contents.html">
+   三、云平台使用
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/contents.html">
+   四、平台软件库
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../dataset/contents.html">
+   五、公开数据集
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/hpc/contents.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   1. 登录
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2. 文件传输
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   3. 队列介绍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   4. 常用命令
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bsub">
+     <strong>
+      bsub
+     </strong>
+     提交作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bjobs">
+     <strong>
+      bjobs
+     </strong>
+     查看作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bkill">
+     <strong>
+      bkill
+     </strong>
+     结束作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bpeek">
+     <strong>
+      bpeek
+     </strong>
+     查看作业输出
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bqueues">
+     <strong>
+      bqueues
+     </strong>
+     查看队列
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bhost">
+     <strong>
+      bhost
+     </strong>
+     查看节点
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module">
+     <strong>
+      module
+     </strong>
+     加载软件
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>二、高性能计算平台使用</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   1. 登录
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2. 文件传输
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   3. 队列介绍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   4. 常用命令
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bsub">
+     <strong>
+      bsub
+     </strong>
+     提交作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bjobs">
+     <strong>
+      bjobs
+     </strong>
+     查看作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bkill">
+     <strong>
+      bkill
+     </strong>
+     结束作业
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bpeek">
+     <strong>
+      bpeek
+     </strong>
+     查看作业输出
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bqueues">
+     <strong>
+      bqueues
+     </strong>
+     查看队列
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bhost">
+     <strong>
+      bhost
+     </strong>
+     查看节点
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module">
+     <strong>
+      module
+     </strong>
+     加载软件
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="id1">
+<h1>二、高性能计算平台使用<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>高性能计算平台操作系统使用的是Linux CentOS，作业调度系统使用的是IBM LSF。</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<section id="id2">
+<h2>1. 登录<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<p>点击login01/login02的SSH图标。</p>
+<img alt="../_images/hpc登录.png" class="align-center" src="../_images/hpc登录.png" />
+<p>输入邮件中的用户名和密码。</p>
+<img alt="../_images/hpc登录2.png" class="align-center" src="../_images/hpc登录2.png" />
+</section>
+<section id="id3">
+<h2>2. 文件传输<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<p>点击login01/login02的sftp图标，自动打开Filezilla并连接登录节点。</p>
+<img alt="../_images/文件传输.png" class="align-center" src="../_images/文件传输.png" />
+</section>
+<section id="id4">
+<h2>3. 队列介绍<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
+<p>高性能计算平台目前有以下队列:</p>
+<ul class="simple">
+<li><p>gpu_v100（GPU队列，9个节点，每张显卡32G显存）</p></li>
+<li><p>normal（CPU队列，54个节点，单个节点28核128G内存）</p></li>
+<li><p>6126-24C-768G（CPU队列，2个节点，单个节点24核768G内存）</p></li>
+<li><p>2680v4-28C-512G（CPU队列，3个节点，单个节点28核512G内存）</p></li>
+<li><p>6240-36C-192G（CPU队列，27个节点，单个节点36核192G内存）</p></li>
+<li><p>6240-36C-192G-S（CPU队列，1个节点，单个节点36核192G内存）</p></li>
+<li><p>6126-24C-192G（CPU队列，17个节点，单个节点24核192G内存）</p></li>
+<li><p>7542-64C-512G（CPU队列，4个节点，单个节点64核512G内存）</p></li>
+<li><p>normal_test(CPU队列，1个节点，24核192G内存)</p></li>
+<li><p>gold、6240-36C-192G-S为非公共队列，普通用户无法使用</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>normal_test为快速验证队列，方便新用户检查脚本是否正确，每隔10min会自动杀掉所有任务。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>6240-36C-192G-S队列不对任务最小核数进行限制，适合仅需少量核运行的任务，需要单独联系管理员开通权限。</p>
+</div>
+</section>
+<section id="id5">
+<h2>4. 常用命令<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
+<section id="bsub">
+<h3><strong>bsub</strong> 提交作业<a class="headerlink" href="#bsub" title="永久链接至标题">#</a></h3>
+<p>可以通过命令行或脚本的方式提交作业，推荐使用 <strong>脚本方式</strong> 提交。bsub常用参数：</p>
+<ul>
+<li><p>-n 作业需要CPU核数</p></li>
+<li><p>-q 作业提交队列</p></li>
+<li><p>-J 作业名称</p></li>
+<li><p>-o 标准输出文件</p></li>
+<li><p>-e 标准错误输出文件</p></li>
+<li><p>-gpu 显卡相关参数</p>
+<blockquote>
+<div><p>-gpu的各个参数用:分隔，常用参数如下：</p>
+<p>num=number：每台主机需要GPU的数量。</p>
+<p>mode=shared|exclusive_process：GPU运行模式，shared对应NVIDIA DEFAULT、exclusive_process对应NVIDIA EXCLUSIVE_PROCESS。</p>
+<p>aff=yes|no：是否进行GPU-CPU亲和性绑定。</p>
+</div></blockquote>
+</li>
+</ul>
+<p>命令行方式样例：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>例：提交一个CPU作业
+bsub -J <span class="k">case</span> -q normal_test -n <span class="m">24</span> -o %J.out -e %J.err <span class="s2">&quot;module load anaconda3;python3 XXX&quot;</span>
+
+例：提交一个GPU作业
+bsub -J <span class="k">case</span> -q gpu_v100 -gpu <span class="s2">&quot;num=1:mode=exclusive_process:aff=yes&quot;</span> <span class="s2">&quot;module load anaconda3;python3 XXX&quot;</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>推荐用户使用conda命令创建自己的环境并安装需要的包（优先使用conda install 安装，pip可能部分包不完全兼容）。使用时在脚本中激活环境，如不指定则使用默认base环境。</p>
+</div>
+<p>脚本方式样例：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bsub &lt; job.lsf
+</pre></div>
+</div>
+<p>job.lsf是脚本文件，文件内容参考下面样例:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>例：CPU作业脚本
+<span class="c1">#BSUB -J case</span>
+<span class="c1">#BSUB -q normal_test</span>
+<span class="c1">#BSUB -n 24</span>
+<span class="c1">#BSUB -o %J.out</span>
+<span class="c1">#BSUB -e %J.err</span>
+module load anaconda3
+python3 XXX
+
+例：GPU作业脚本
+<span class="c1">#BSUB -J case</span>
+<span class="c1">#BSUB -q normal_test</span>
+<span class="c1">#BSUB -n 24</span>
+<span class="c1">#BSUB -o %J.out</span>
+<span class="c1">#BSUB -e %J.err</span>
+<span class="c1">#BSUB -gpu &quot;num=1:mode=exclusive_process:aff=yes&quot;</span>
+module load anaconda3
+python3 XXX
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>GPU作业不需要指定CPU核，系统会自动根据申请得卡按1：3分配CPU核。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>GPU作业不要在代码中指定GPU设备号，不要在脚本或代码中为CUDA_VISIBLE_DEVICES指定具体的值，这会导致任务抛出RuntimeError: CUDA error: all CUDA-capable devices are busy or unavailable。</p>
+<p>Python为例：系统会自动将申请的GPU设备号赋给环境变量os.environ[‘CUDA_VISIBLE_DEVICES’]，可以在代码中通过os.environ[‘CUDA_VISIBLE_DEVICES’]获取分配的GPU设备号。</p>
+</div>
+</section>
+<section id="bjobs">
+<h3><strong>bjobs</strong> 查看作业<a class="headerlink" href="#bjobs" title="永久链接至标题">#</a></h3>
+<p>bjobs 查看自己提交的任务，bjobs -l jobid 查看任务详情。</p>
+<img alt="../_images/bjobs.png" class="align-center" src="../_images/bjobs.png" />
+</section>
+<section id="bkill">
+<h3><strong>bkill</strong> 结束作业<a class="headerlink" href="#bkill" title="永久链接至标题">#</a></h3>
+<p>bkill 作业ID 杀掉定的作业。</p>
+<img alt="../_images/bkill.png" class="align-center" src="../_images/bkill.png" />
+</section>
+<section id="bpeek">
+<h3><strong>bpeek</strong> 查看作业输出<a class="headerlink" href="#bpeek" title="永久链接至标题">#</a></h3>
+<p>bpeek -f jobid 查看任务日志，显示处于运行时作业的标准输出和标准错误输出信息。</p>
+<img alt="../_images/bpeek.png" class="align-center" src="../_images/bpeek.png" />
+</section>
+<section id="bqueues">
+<h3><strong>bqueues</strong> 查看队列<a class="headerlink" href="#bqueues" title="永久链接至标题">#</a></h3>
+<p>bqueues查看全部队列，bqueues -l 队列名查看队列详情。</p>
+<img alt="../_images/bqueues.png" class="align-center" src="../_images/bqueues.png" />
+<p>NJOBS显示的是当前队列的总核数（排队核数+运行核数），PEND显示的是当前队列排队的核数，RUN显示的是当前队列运行的核数，提交任务时请自行选择合适的队列。</p>
+</section>
+<section id="bhost">
+<h3><strong>bhost</strong> 查看节点<a class="headerlink" href="#bhost" title="永久链接至标题">#</a></h3>
+<p>bhosts查看全部节点信息，bhosts -w 查看详细状态。</p>
+<img alt="../_images/bhosts.png" class="align-center" src="../_images/bhosts.png" />
+<p>其中status有四个状态，ok表示可以接受新提交任务；closed_Full表示已经运行满任务，不能接受新提交任务；closed_Adm表示节点已下线；unavailable表示节点不可用。</p>
+</section>
+<section id="module">
+<h3><strong>module</strong> 加载软件<a class="headerlink" href="#module" title="永久链接至标题">#</a></h3>
+<p>module av查看可用软件，module load xxx加载所需软件。</p>
+<img alt="../_images/module.png" class="align-center" src="../_images/module.png" />
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../login/contents.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">一、堡垒机登录</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../cloud/contents.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">三、云平台使用</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By zhengfa<br/>
+  
+      &copy; Copyright 2022, zhengfa.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

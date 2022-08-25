@@ -1,0 +1,11 @@
+OpenFoam
+=================================
+
+.. hint:: 更多样例代码尽在/seu_share/home/examples
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 目录:
+
+
+正在飞速赶来
